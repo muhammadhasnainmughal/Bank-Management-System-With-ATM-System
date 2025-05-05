@@ -71,7 +71,7 @@ public final class employee_portal extends javax.swing.JFrame {
     File path;
     int employeeid;
     String save_type = null;
- public static String emplogin = "EMP-1001";//login.user.getText();
+ public static String emplogin =login.user.getText();
     byte[] mg;
     Color color, c;
     int see = 0;

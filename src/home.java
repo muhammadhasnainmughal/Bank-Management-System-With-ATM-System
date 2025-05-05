@@ -1224,7 +1224,6 @@ public static boolean isValidEmailAddress(String email) {
         jPanel12 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         top_logo = new javax.swing.JLabel();
-        jButton18 = new javax.swing.JButton();
         jPanel21 = new javax.swing.JPanel();
         home_pnl = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -2200,9 +2199,6 @@ public static boolean isValidEmailAddress(String email) {
         jPanel11.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 50, 37));
         jPanel11.add(top_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 7, 35, 25));
 
-        jButton18.setText("jButton18");
-        jPanel11.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
-
         getContentPane().add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 40));
 
         jPanel21.setLayout(new java.awt.CardLayout());
@@ -2233,6 +2229,7 @@ public static boolean isValidEmailAddress(String email) {
         d2_l2.setForeground(new java.awt.Color(255, 255, 255));
         d2_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d2_l2.setText("Female Employees");
+        d2_l2.setMinimumSize(null);
         d2_1.add(d2_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 60, 130, 30));
         d2_1.add(emp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -2324,6 +2321,7 @@ public static boolean isValidEmailAddress(String email) {
         d6_l2.setForeground(new java.awt.Color(255, 255, 255));
         d6_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d6_l2.setText("Saving Accounts");
+        d6_l2.setMinimumSize(null);
         d6_1.add(d6_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 60, 120, 30));
         d6_1.add(emp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -2369,6 +2367,7 @@ public static boolean isValidEmailAddress(String email) {
         d5_l2.setForeground(new java.awt.Color(255, 255, 255));
         d5_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d5_l2.setText("ATM Accounts");
+        d5_l2.setMinimumSize(null);
         d5_1.add(d5_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 60, 120, 30));
         d5_1.add(emp6, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -2414,6 +2413,7 @@ public static boolean isValidEmailAddress(String email) {
         d9_l2.setForeground(new java.awt.Color(255, 255, 255));
         d9_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d9_l2.setText("Withdraw Balance");
+        d9_l2.setMinimumSize(null);
         d9_1.add(d9_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 60, 130, 30));
         d9_1.add(emp7, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -2459,6 +2459,7 @@ public static boolean isValidEmailAddress(String email) {
         d8_l2.setForeground(new java.awt.Color(255, 255, 255));
         d8_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d8_l2.setText("Deposite Balance");
+        d8_l2.setMinimumSize(null);
         d8_1.add(d8_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 60, 120, 30));
         d8_1.add(emp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -2504,6 +2505,7 @@ public static boolean isValidEmailAddress(String email) {
         d7_l2.setForeground(new java.awt.Color(255, 255, 255));
         d7_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d7_l2.setText("Bank Balance");
+        d7_l2.setMinimumSize(null);
         d7_1.add(d7_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 60, 120, 30));
         d7_1.add(emp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -2550,6 +2552,7 @@ public static boolean isValidEmailAddress(String email) {
         d1_l2.setForeground(new java.awt.Color(255, 255, 255));
         d1_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d1_l2.setText("Male Employees");
+        d1_l2.setMinimumSize(null);
         d1_1.add(d1_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 60, 120, 30));
         d1_1.add(emp8, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -2595,6 +2598,7 @@ public static boolean isValidEmailAddress(String email) {
         d4_l2.setForeground(new java.awt.Color(255, 255, 255));
         d4_l2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         d4_l2.setText("Current Accounts");
+        d4_l2.setMinimumSize(null);
         d4_1.add(d4_l2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 60, 130, 30));
         d4_1.add(emp9, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, 50, 40));
 
@@ -3576,6 +3580,7 @@ public static boolean isValidEmailAddress(String email) {
         f4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Marital Status", "Married", "Unmarried" }));
         f4.setBorder(null);
         f4.setLightWeightPopupEnabled(false);
+        f4.setOpaque(false);
         f4.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 entry_error(evt);
@@ -3915,7 +3920,7 @@ public static boolean isValidEmailAddress(String email) {
 
         jPanel21.add(entry, "card8");
 
-        entry2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), ".", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 153))); // NOI18N
+        entry2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), ".", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 153))); // NOI18N
         entry2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 red_menter(evt);
@@ -4327,6 +4332,7 @@ public static boolean isValidEmailAddress(String email) {
         u4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Status", "Married", "Unmarried" }));
         u4.setBorder(null);
         u4.setLightWeightPopupEnabled(false);
+        u4.setOpaque(false);
         aspane2.add(u4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 140, 25));
 
         jLabel87.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -5761,7 +5767,7 @@ public static boolean isValidEmailAddress(String email) {
 
         jPanel21.add(search_acc, "card10");
 
-        action_acc.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 153))); // NOI18N
+        action_acc.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 153))); // NOI18N
         action_acc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 action_accred_menter(evt);
@@ -10785,7 +10791,6 @@ void pdf_emp_acc(JTable tb, String name,String from,String to) {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

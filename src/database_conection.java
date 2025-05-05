@@ -10,7 +10,7 @@ public class database_conection {
         Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_project","root","admin");
         return con;
         }catch(SQLException e){
-            JLabel messageLabel = new JLabel("<html><body><p style='width: 200px;'>"+e.getMessage()+"Database server connection error"+"</p></body></html>");
+            JLabel messageLabel = new JLabel("<html><body><p style='width: 200px;'>"+"Database server connection error"+"</p></body></html>");
         Timer timr = new Timer(4000, (ActionEvent event) -> {
             SwingUtilities.getWindowAncestor(messageLabel).dispose();
         });
