@@ -158,35 +158,6 @@ public class atm_portal extends JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         main_panel = new javax.swing.JPanel();
-        keypad = new javax.swing.JPanel();
-        jPanel21 = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jPanel20 = new javax.swing.JPanel();
-        lb1 = new ronds(30,60);
-        lb01 = new javax.swing.JLabel();
-        jPanel15 = new ronds(30,60);
-        lb0 = new javax.swing.JLabel();
-        jPanel14 = new ronds(30,60);
-        lb00 = new javax.swing.JLabel();
-        jPanel8 = new ronds(30,60);
-        lb3 = new javax.swing.JLabel();
-        pn7 = new ronds(30,60);
-        lb7 = new javax.swing.JLabel();
-        jPanel5 = new ronds(30,60);
-        lb8 = new javax.swing.JLabel();
-        jPanel6 = new ronds(30,60);
-        lb9 = new javax.swing.JLabel();
-        jPanel7 = new ronds(30,60);
-        jLabel1 = new javax.swing.JLabel();
-        jPanel17 = new ronds(30,60);
-        lb02 = new javax.swing.JLabel();
-        jPanel12 = new ronds(30,60);
-        lb6 = new javax.swing.JLabel();
-        jPanel11 = new ronds(30,60);
-        lb5 = new javax.swing.JLabel();
-        jPanel9 = new ronds(30,60);
-        lb4 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         screen = new javax.swing.JPanel();
         atm_num = new javax.swing.JPanel();
         er2 = new javax.swing.JLabel();
@@ -410,7 +381,6 @@ public class atm_portal extends JFrame {
         b35 = new javax.swing.JLabel();
         b36 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         main = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
@@ -470,308 +440,12 @@ public class atm_portal extends JFrame {
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(681, 0, 45, 35));
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel5.setText("Welcome to SKY Bank ATM Service");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Welcome to ABC Bank ATM Service");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 380, 30));
 
         main_panel.setOpaque(false);
         main_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        keypad.setOpaque(false);
-        keypad.setLayout(new java.awt.CardLayout());
-
-        jPanel21.setOpaque(false);
-        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("Show Keypad");
-        jLabel20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel20MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel20MouseEntered(evt);
-            }
-        });
-        jPanel21.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 10, 100, 20));
-
-        keypad.add(jPanel21, "card3");
-
-        jPanel20.setOpaque(false);
-        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb1.setBackground(new java.awt.Color(142, 142, 142));
-        lb1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lb1MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                lb1MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                lb1MouseReleased(evt);
-            }
-        });
-        lb1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb01.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb01.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb01.setText("1");
-        lb1.add(lb01, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 7, 60, -1));
-
-        jPanel20.add(lb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 112, 60, 30));
-
-        jPanel15.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel15.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel15MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel15MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel15MouseReleased(evt);
-            }
-        });
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb0.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb0.setText("0");
-        jPanel15.add(lb0, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 112, 60, 30));
-
-        jPanel14.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel14.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel14MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel14MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel14MouseReleased(evt);
-            }
-        });
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb00.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb00.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb00.setText("00");
-        jPanel14.add(lb00, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 112, 60, 30));
-
-        jPanel8.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel8MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel8MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel8MouseReleased(evt);
-            }
-        });
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb3.setText("3");
-        jPanel8.add(lb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 72, 60, 30));
-
-        pn7.setBackground(new java.awt.Color(142, 142, 142));
-        pn7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pn7MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                pn7MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                pn7MouseReleased(evt);
-            }
-        });
-        pn7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb7.setText("7");
-        pn7.add(lb7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(pn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 33, 60, 30));
-
-        jPanel5.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel5MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel5MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel5MouseReleased(evt);
-            }
-        });
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb8.setText("8");
-        jPanel5.add(lb8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 33, 60, 30));
-
-        jPanel6.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel6MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel6MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel6MouseReleased(evt);
-            }
-        });
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb9.setText("9");
-        jPanel6.add(lb9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 7, 60, -1));
-
-        jPanel20.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 33, 60, 30));
-
-        jPanel7.setBackground(new java.awt.Color(255, 102, 102));
-        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel7MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel7MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel7MouseReleased(evt);
-            }
-        });
-        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("×");
-        jPanel7.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 28));
-
-        jPanel20.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 33, 60, 30));
-
-        jPanel17.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel17MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel17MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel17MouseReleased(evt);
-            }
-        });
-        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb02.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb02.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb02.setText("2");
-        jPanel17.add(lb02, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 112, 60, 30));
-
-        jPanel12.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel12MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel12MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel12MouseReleased(evt);
-            }
-        });
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb6.setText("6");
-        jPanel12.add(lb6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 72, 60, 30));
-
-        jPanel11.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel11MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel11MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel11MouseReleased(evt);
-            }
-        });
-        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb5.setText("5");
-        jPanel11.add(lb5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 72, 60, 30));
-
-        jPanel9.setBackground(new java.awt.Color(142, 142, 142));
-        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel9MouseClicked(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel9MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jPanel9MouseReleased(evt);
-            }
-        });
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lb4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lb4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb4.setText("4");
-        jPanel9.add(lb4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 30));
-
-        jPanel20.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 72, 60, 30));
-
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Hide Keypad");
-        jLabel19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel19MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel19MouseEntered(evt);
-            }
-        });
-        jPanel20.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 3, 80, 20));
-
-        keypad.add(jPanel20, "card2");
-
-        main_panel.add(keypad, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 208, 290, 150));
 
         screen.setOpaque(false);
         screen.setLayout(new java.awt.CardLayout());
@@ -787,7 +461,6 @@ public class atm_portal extends JFrame {
         atm.setForeground(new java.awt.Color(102, 102, 102));
         atm.setText("Enter ATM account number");
         atm.setBorder(null);
-        atm.setOpaque(false);
         atm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 atmMouseClicked(evt);
@@ -895,7 +568,6 @@ public class atm_portal extends JFrame {
         pass1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         pass1.setText("Enter Pincode");
         pass1.setBorder(null);
-        pass1.setOpaque(false);
         pass1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 pass1FocusGained(evt);
@@ -1039,7 +711,6 @@ public class atm_portal extends JFrame {
         newpass1.setForeground(new java.awt.Color(102, 102, 102));
         newpass1.setText("Enter new Pincode");
         newpass1.setBorder(null);
-        newpass1.setOpaque(false);
         newpass1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 newpass1MouseClicked(evt);
@@ -1073,7 +744,6 @@ public class atm_portal extends JFrame {
         newpass2.setForeground(new java.awt.Color(102, 102, 102));
         newpass2.setText("Enter confirm Pincode");
         newpass2.setBorder(null);
-        newpass2.setOpaque(false);
         newpass2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 newpass2MouseClicked(evt);
@@ -1416,7 +1086,6 @@ public class atm_portal extends JFrame {
         atm1.setForeground(new java.awt.Color(102, 102, 102));
         atm1.setText("Enter reciever atm account");
         atm1.setBorder(null);
-        atm1.setOpaque(false);
         atm1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 atm1MouseClicked(evt);
@@ -1594,7 +1263,6 @@ public class atm_portal extends JFrame {
         atm2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         atm2.setText("Enter amount");
         atm2.setBorder(null);
-        atm2.setOpaque(false);
         atm2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 atm2MouseClicked(evt);
@@ -1714,22 +1382,18 @@ public class atm_portal extends JFrame {
 
         snd.setEditable(false);
         snd.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        snd.setOpaque(false);
         reciever.add(snd, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 15, 128, 20));
 
         tit.setEditable(false);
         tit.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        tit.setOpaque(false);
         reciever.add(tit, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 45, 128, 20));
 
         rc.setEditable(false);
         rc.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        rc.setOpaque(false);
         reciever.add(rc, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 75, 128, 20));
 
         am.setEditable(false);
         am.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        am.setOpaque(false);
         reciever.add(am, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 100, 128, 20));
 
         screen.add(reciever, "card8");
@@ -1988,7 +1652,6 @@ public class atm_portal extends JFrame {
         atm3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         atm3.setText("Enter withdrawal amount");
         atm3.setBorder(null);
-        atm3.setOpaque(false);
         atm3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 atm3MouseClicked(evt);
@@ -2212,11 +1875,6 @@ public class atm_portal extends JFrame {
 
         jPanel1.add(main_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 350, 380));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel2.setText("@amirghafoor");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(685, 480, 85, 20));
-
         main.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_project/nta.jpg"))); // NOI18N
         main.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -2294,8 +1952,6 @@ public class atm_portal extends JFrame {
             }
         });
         st_table.setRowHeight(23);
-        st_table.setShowHorizontalLines(false);
-        st_table.setShowVerticalLines(false);
         jScrollPane2.setViewportView(st_table);
 
         jPanel19.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 110, 355, 260));
@@ -2345,49 +2001,6 @@ Color color,c;
         // TODO add your handling code here:
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel9MouseClicked
-
-    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        // TODO add your handling code here:
-        jPanel21.setVisible(false);
-        jPanel20.setVisible(true);
-        keypad.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(153, 153, 153), new java.awt.Color(102, 102, 102)));
-        //jPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,102,102)), "Keypad Screen", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 10)));
-    }//GEN-LAST:event_jLabel20MouseClicked
-
-    private void lb1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MouseClicked
-        // TODO add your handling code here:
-        print_num("1");
-    }//GEN-LAST:event_lb1MouseClicked
-
-    private void jPanel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseClicked
-        // TODO add your handling code here:
-        print_num("0");
-    }//GEN-LAST:event_jPanel15MouseClicked
-
-    private void jPanel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseClicked
-        // TODO add your handling code here:
-        print_num("00");
-    }//GEN-LAST:event_jPanel14MouseClicked
-
-    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
-        // TODO add your handling code here:
-        print_num("3");
-    }//GEN-LAST:event_jPanel8MouseClicked
-
-    private void pn7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn7MouseClicked
-        // TODO add your handling code here:
-        print_num("7");
-    }//GEN-LAST:event_pn7MouseClicked
-
-    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
-        // TODO add your handling code here:
-        print_num("8");
-    }//GEN-LAST:event_jPanel5MouseClicked
-
-    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
-        // TODO add your handling code here:
-        print_num("9");
-    }//GEN-LAST:event_jPanel6MouseClicked
 void text_field_remove(JTextField at,JLabel lb,String text){
      if(!(at.getText().equals(text))){
                 String std=at.getText();
@@ -2422,33 +2035,7 @@ void pass_field_remove(JPasswordField pass,JLabel lb,JLabel ico,String text){
                     pass.setText(std);
                 }
             }
-}
-    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
-        // TODO add your handling code here:
-        if(acc==0){
-            text_field_remove(atm,er2,"Enter ATM account number");
-        }
-        else if(acc==1){
-            pass_field_remove(pass1,err1,lb2,"Enter Pincode");
-        }
-        else if(acc==24){
-            text_field_remove(atm1,er3,"Enter reciever atm account");
-        }
-        else if(acc==241){
-            text_field_remove(atm2,er4,"Enter amount");
-        }
-        else if(acc==22){
-            text_field_remove(atm3,er5,"Enter withdrawal amount");
-        }
-        else if(acc==31){
-            pass_field_remove(newpass1,newerr1,lb10,pin_text1);
-        }
-        else if(acc==32){
-            pass_field_remove(newpass2,newerr2,lb11,pin_text2);
-        }
-        
-    }//GEN-LAST:event_jPanel7MouseClicked
-void field_clear(JTextField f,JLabel lb,String text){
+}void field_clear(JTextField f,JLabel lb,String text){
     f.setText(text);
     f.setForeground(new Color(102,102,102));
     f.setFont(new Font("Verdana",0,12));
@@ -2467,34 +2054,6 @@ void pass_field_clear(JPasswordField p,JLabel pic,JLabel lb,String text){
     lb.setText(null);
     seee=0;
 }
-    private void jPanel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseClicked
-        // TODO add your handling code here:
-        print_num("2");
-    }//GEN-LAST:event_jPanel17MouseClicked
-
-    private void jPanel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseClicked
-        // TODO add your handling code here:
-        print_num("6");
-    }//GEN-LAST:event_jPanel12MouseClicked
-
-    private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseClicked
-        // TODO add your handling code here:
-        print_num("5");
-    }//GEN-LAST:event_jPanel11MouseClicked
-
-    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
-        // TODO add your handling code here:
-        print_num("4");
-    }//GEN-LAST:event_jPanel9MouseClicked
-
-    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-        // TODO add your handling code here:
-        jPanel20.setVisible(false);
-        jPanel21.setVisible(true);
-        jPanel20.setBorder(null);
-        keypad.setBorder(null);
-    }//GEN-LAST:event_jLabel19MouseClicked
-
     private void atmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atmMouseClicked
         // TODO add your handling code here:
         if(atm.getText().equals("Enter ATM account number")){
@@ -2676,16 +2235,6 @@ int xm,ym;
         ym=evt.getY();
     }//GEN-LAST:event_mainMousePressed
 
-    private void jLabel20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseEntered
-        // TODO add your handling code here:
-        jLabel20.setToolTipText("Click to show Keypad");
-    }//GEN-LAST:event_jLabel20MouseEntered
-
-    private void jLabel19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseEntered
-        // TODO add your handling code here:
-        jLabel19.setToolTipText("Click to hide Keypad");
-    }//GEN-LAST:event_jLabel19MouseEntered
-
     private void lb10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb10MouseClicked
         // TODO add your handling code here:
         if(!(newpass1.getText().equals(pin_text1))){
@@ -2822,148 +2371,6 @@ void new_pin_effect(java.awt.event.KeyEvent evt,JPasswordField f,JLabel lb1,JLab
             newpass2.setCaretPosition(0);
         }
     }//GEN-LAST:event_newpass2MousePressed
-
-    private void pn7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn7MousePressed
-        // TODO add your handling code here:
-        hover(pn7);
-        lb7.setForeground(Color.white);
-    }//GEN-LAST:event_pn7MousePressed
-
-    private void pn7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pn7MouseReleased
-        // TODO add your handling code here:
-        pn7.setBackground(color);
-        lb7.setForeground(Color.black);
-    }//GEN-LAST:event_pn7MouseReleased
-
-    private void jPanel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MousePressed
-        // TODO add your handling code here:
-        hover(jPanel5);
-        lb8.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel5MousePressed
-
-    private void jPanel5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseReleased
-        // TODO add your handling code here:
-        jPanel5.setBackground(color);
-        lb8.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel5MouseReleased
-
-    private void jPanel6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MousePressed
-        // TODO add your handling code here:
-        hover(jPanel6);
-        lb9.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel6MousePressed
-
-    private void jPanel6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseReleased
-        // TODO add your handling code here:
-        jPanel6.setBackground(color);
-        lb9.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel6MouseReleased
-
-    private void jPanel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MousePressed
-        // TODO add your handling code here:
-        jPanel7.setBackground(Color.red);
-    }//GEN-LAST:event_jPanel7MousePressed
-
-    private void jPanel7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseReleased
-        // TODO add your handling code here:
-        jPanel7.setBackground(new Color(255,102,102));
-    }//GEN-LAST:event_jPanel7MouseReleased
-
-    private void jPanel12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MousePressed
-        // TODO add your handling code here:
-        hover(jPanel12);
-        lb6.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel12MousePressed
-
-    private void jPanel12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseReleased
-        // TODO add your handling code here:
-        jPanel12.setBackground(color);
-        lb6.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel12MouseReleased
-
-    private void jPanel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MousePressed
-        // TODO add your handling code here:
-         hover(jPanel11);
-        lb5.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel11MousePressed
-
-    private void jPanel11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseReleased
-        // TODO add your handling code here:
-        jPanel11.setBackground(color);
-        lb5.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel11MouseReleased
-
-    private void jPanel9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MousePressed
-        // TODO add your handling code here:
-        hover(jPanel9);
-        lb4.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel9MousePressed
-
-    private void jPanel9MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseReleased
-        // TODO add your handling code here:
-        jPanel9.setBackground(color);
-        lb4.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel9MouseReleased
-
-    private void jPanel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MousePressed
-        // TODO add your handling code here:
-        hover(jPanel8);
-        lb3.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel8MousePressed
-
-    private void jPanel8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseReleased
-        // TODO add your handling code here:
-        jPanel8.setBackground(color);
-        lb3.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel8MouseReleased
-
-    private void jPanel14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MousePressed
-        // TODO add your handling code here:
-        hover(jPanel14);
-        lb00.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel14MousePressed
-
-    private void jPanel14MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseReleased
-        // TODO add your handling code here:
-        jPanel14.setBackground(color);
-        lb00.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel14MouseReleased
-
-    private void jPanel15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MousePressed
-        // TODO add your handling code here:
-        hover(jPanel15);
-        lb0.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel15MousePressed
-
-    private void jPanel15MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseReleased
-        // TODO add your handling code here:
-        jPanel15.setBackground(color);
-        lb0.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel15MouseReleased
-
-    private void lb1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MousePressed
-        // TODO add your handling code here:
-        hover(lb1);
-        lb01.setForeground(Color.white);
-    }//GEN-LAST:event_lb1MousePressed
-
-    private void lb1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb1MouseReleased
-        // TODO add your handling code here:
-        lb1.setBackground(color);
-        lb01.setForeground(Color.black);
-    }//GEN-LAST:event_lb1MouseReleased
-
-    private void jPanel17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MousePressed
-        // TODO add your handling code here:
-        hover(jPanel17);
-        lb02.setForeground(Color.white);
-    }//GEN-LAST:event_jPanel17MousePressed
-
-    private void jPanel17MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseReleased
-        // TODO add your handling code here:
-        jPanel17.setBackground(color);
-        lb02.setForeground(Color.black);
-    }//GEN-LAST:event_jPanel17MouseReleased
 
     private void b10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b10MouseEntered
         // TODO add your handling code here:
@@ -4330,7 +3737,6 @@ void rpct(){
     private javax.swing.JLabel er5;
     private javax.swing.JLabel err1;
     private javax.swing.JPanel home;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -4339,9 +3745,6 @@ void rpct(){
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -4389,18 +3792,11 @@ void rpct(){
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
@@ -4427,30 +3823,12 @@ void rpct(){
     private javax.swing.JPanel jPanel47;
     private javax.swing.JPanel jPanel48;
     private javax.swing.JPanel jPanel49;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel50;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JPanel keypad;
-    private javax.swing.JLabel lb0;
-    private javax.swing.JLabel lb00;
-    private javax.swing.JLabel lb01;
-    private javax.swing.JLabel lb02;
-    private javax.swing.JPanel lb1;
     private javax.swing.JLabel lb10;
     private javax.swing.JLabel lb11;
     private javax.swing.JLabel lb2;
-    private javax.swing.JLabel lb3;
-    private javax.swing.JLabel lb4;
-    private javax.swing.JLabel lb5;
-    private javax.swing.JLabel lb6;
-    private javax.swing.JLabel lb7;
-    private javax.swing.JLabel lb8;
-    private javax.swing.JLabel lb9;
     private javax.swing.JLabel lbb1;
     private javax.swing.JLabel lbb10;
     private javax.swing.JLabel lbb11;
@@ -4501,7 +3879,6 @@ void rpct(){
     private javax.swing.JPanel p9;
     private javax.swing.JPasswordField pass1;
     private javax.swing.JPanel pincode;
-    private javax.swing.JPanel pn7;
     private javax.swing.JTextField rc;
     private javax.swing.JPanel reciever;
     private javax.swing.JPanel recipt;
