@@ -4,6 +4,7 @@
  */
 package inventory;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,6 +13,9 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -24,7 +28,23 @@ public class first_Page extends javax.swing.JFrame {
      * Creates new form first_Page
      */
     public first_Page() {
+        
+        try{
+            
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch(UnsupportedLookAndFeelException e){
+            
+            e.printStackTrace();
+        }
+        
+        setTitle("Home");
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
+        //setSize(1200, 1200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         initComponents();
+        
     }
 
     /**
@@ -61,7 +81,7 @@ public class first_Page extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 210, 90));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 210, 90));
 
         jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N

@@ -4,8 +4,12 @@
  */
 package inventory;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -22,6 +26,24 @@ public class Manage_Product extends javax.swing.JFrame {
      * Creates new form Manage_Product
      */
     public Manage_Product() {
+        
+        try{
+            
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch(UnsupportedLookAndFeelException e){
+            
+            e.printStackTrace();
+        }
+        
+        setTitle("Products");
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
+        //setSize(1200, 1200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+        
+        
         initComponents();
         btndelete.setEnabled(false);
     }

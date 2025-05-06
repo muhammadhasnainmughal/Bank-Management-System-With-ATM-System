@@ -4,6 +4,7 @@
  */
 package inventory;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,6 +13,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -24,6 +28,23 @@ public class Manage_Customer extends javax.swing.JFrame {
      * Creates new form Manage_Customer
      */
     public Manage_Customer() {
+        
+        try{
+            
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch(UnsupportedLookAndFeelException e){
+            
+            e.printStackTrace();
+        }
+        
+        setTitle("Customers");
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
+        //setSize(1200, 1200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+        
         initComponents();
          btndelete.setEnabled(false);
     }

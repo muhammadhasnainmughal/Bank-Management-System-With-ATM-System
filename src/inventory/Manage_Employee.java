@@ -4,6 +4,7 @@
  */
 package inventory;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,6 +13,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -24,9 +28,25 @@ public class Manage_Employee extends javax.swing.JFrame {
     private int appuserPK = 0;
     int user;
     /**
-     * Creates new form Manage_Userr
+     * Creates new form Manage_User
      */
     public Manage_Employee() {
+        
+        try{
+            
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch(UnsupportedLookAndFeelException e){
+            
+            e.printStackTrace();
+        }
+        
+        setTitle("Employees");
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
+        //setSize(1200, 1200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
         initComponents();
         setLocationRelativeTo(null);
     }

@@ -4,7 +4,11 @@
  */
 package inventory;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class login extends javax.swing.JFrame {
 
@@ -12,6 +16,23 @@ public class login extends javax.swing.JFrame {
      * Creates new form login
      */
     public login() {
+        
+        try{
+            
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch(UnsupportedLookAndFeelException e){
+            
+            e.printStackTrace();
+        }
+        
+        setTitle("Login");
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
+        //setSize(1200, 1200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+        
         initComponents();
         jTextField1.setBackground(new java.awt.Color(0, 0, 0, 1));
         jPasswordField1.setBackground( new java.awt.Color(0,0,0,1));

@@ -4,8 +4,12 @@
  */
 package inventory;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -23,6 +27,24 @@ public class Order_Receipt extends javax.swing.JFrame {
     public Order_Receipt(int orderID , String totalCost) {
         order_id= orderID;
         total_cost=totalCost;
+        
+        try{
+            
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch(UnsupportedLookAndFeelException e){
+            
+            e.printStackTrace();
+        }
+        
+        setTitle("Order Receipt");
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
+        //setSize(1200, 1200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+        
+        
         initComponents();
     }
     

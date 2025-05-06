@@ -8,6 +8,10 @@ import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableModel;
+import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Toolkit;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -21,6 +25,23 @@ public class Manage_Category extends javax.swing.JFrame {
      */
     int category_id;
     public Manage_Category() {
+        
+        try{
+            
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch(UnsupportedLookAndFeelException e){
+            
+            e.printStackTrace();
+        }
+        
+        setTitle("IMS");
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
+        //setSize(1200, 1200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        
         initComponents();
        // btndelete.setEnabled(false);
         
