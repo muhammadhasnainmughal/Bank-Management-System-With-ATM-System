@@ -63,15 +63,15 @@ public class first_Page extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocation(new java.awt.Point(400, 150));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(153, 153, 153));
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/emp.png"))); // NOI18N
         jButton1.setText("EMPLOYEES");
         jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -81,10 +81,11 @@ public class first_Page extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 210, 90));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 370, 70));
 
-        jButton2.setBackground(new java.awt.Color(153, 153, 153));
+        jButton2.setBackground(new java.awt.Color(0, 153, 153));
         jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/box.png"))); // NOI18N
         jButton2.setText("PRODUCTS");
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -93,10 +94,11 @@ public class first_Page extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 200, 90));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 180, 370, 70));
 
-        jButton3.setBackground(new java.awt.Color(153, 153, 153));
+        jButton3.setBackground(new java.awt.Color(0, 153, 153));
         jButton3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/invoice.png"))); // NOI18N
         jButton3.setText(" INVOICE");
         jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -105,10 +107,11 @@ public class first_Page extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 210, 90));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 370, 70));
 
-        jButton4.setBackground(new java.awt.Color(153, 153, 153));
+        jButton4.setBackground(new java.awt.Color(0, 153, 153));
         jButton4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/customer.png"))); // NOI18N
         jButton4.setText("CUSTOMERS");
         jButton4.setToolTipText("");
@@ -118,10 +121,11 @@ public class first_Page extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 200, 90));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 270, 370, 70));
 
-        jButton5.setBackground(new java.awt.Color(153, 153, 153));
+        jButton5.setBackground(new java.awt.Color(0, 153, 153));
         jButton5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
         jButton5.setText("LOGOUT");
         jButton5.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -130,10 +134,11 @@ public class first_Page extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 190, 80));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 760, 70));
 
-        jButton7.setBackground(new java.awt.Color(153, 153, 153));
+        jButton7.setBackground(new java.awt.Color(0, 153, 153));
         jButton7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/material-management.png"))); // NOI18N
         jButton7.setText("CATEGORY");
         jButton7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -142,10 +147,11 @@ public class first_Page extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 210, 90));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 370, 70));
 
-        jButton8.setBackground(new java.awt.Color(153, 153, 153));
+        jButton8.setBackground(new java.awt.Color(0, 153, 153));
         jButton8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inventory.png"))); // NOI18N
         jButton8.setText("ORDERS");
         jButton8.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -154,10 +160,7 @@ public class first_Page extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 200, 90));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Untitled design (4).jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 530));
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 370, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -260,6 +263,5 @@ public class first_Page extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

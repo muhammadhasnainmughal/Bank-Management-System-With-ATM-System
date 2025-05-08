@@ -78,7 +78,6 @@ public class Manage_Employee extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         user_id = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
@@ -91,9 +90,10 @@ public class Manage_Employee extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("Manage Employees");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, -1, 50));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -110,50 +110,55 @@ public class Manage_Employee extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 460, 480));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 1040, 590));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Name");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
 
         name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameActionPerformed(evt);
             }
         });
-        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, 325, -1));
+        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 325, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Mobile Number");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, -1, -1));
-        getContentPane().add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 325, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+        getContentPane().add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 325, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Email");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, -1, -1));
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 325, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 325, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setText("Address");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, -1));
 
         address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressActionPerformed(evt);
             }
         });
-        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 325, -1));
+        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 325, -1));
 
         jButton1.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 153, 153));
         jButton1.setText("Save");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, 110, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 580, 110, -1));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
         jButton4.setBorderPainted(false);
@@ -166,30 +171,28 @@ public class Manage_Employee extends javax.swing.JFrame {
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
         jButton2.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 153, 153));
         jButton2.setText("Update");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.darkGray, java.awt.Color.black));
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         jButton2.setContentAreaFilled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, 110, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 580, 110, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Employee ID");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 330, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, -1, -1));
 
         user_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 user_idActionPerformed(evt);
             }
         });
-        getContentPane().add(user_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 325, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Untitled design (4).jpg"))); // NOI18N
-        jLabel9.setText("jLabel9");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 620));
+        getContentPane().add(user_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 325, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -427,7 +430,6 @@ public class Manage_Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField mobile;

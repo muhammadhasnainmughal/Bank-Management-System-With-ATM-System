@@ -66,7 +66,6 @@ public class Manage_Category extends javax.swing.JFrame {
         categorytable = new javax.swing.JTable();
         btndelete = new javax.swing.JButton();
         Button = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(350, 125));
@@ -76,7 +75,6 @@ public class Manage_Category extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 jPanel1ComponentShown(evt);
@@ -86,20 +84,22 @@ public class Manage_Category extends javax.swing.JFrame {
 
         btnsave.setBackground(new java.awt.Color(153, 153, 153));
         btnsave.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnsave.setForeground(new java.awt.Color(0, 153, 153));
         btnsave.setText("Save");
-        btnsave.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnsave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btnsave.setContentAreaFilled(false);
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 80, 30));
+        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 80, 30));
 
         btnupdate.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnupdate.setForeground(new java.awt.Color(0, 153, 153));
         btnupdate.setText("Update");
         btnupdate.setAutoscrolls(true);
-        btnupdate.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnupdate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btnupdate.setContentAreaFilled(false);
         btnupdate.setDoubleBuffered(true);
         btnupdate.setFocusCycleRoot(true);
@@ -108,18 +108,20 @@ public class Manage_Category extends javax.swing.JFrame {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 80, 30));
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 80, 30));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("Manage  Category");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 0, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 0, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
         txtname.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 282, 28));
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 282, 28));
 
         categorytable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
         categorytable.setModel(new javax.swing.table.DefaultTableModel(
@@ -137,18 +139,19 @@ public class Manage_Category extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(categorytable);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 380, -1));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 1060, 650));
 
         btndelete.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btndelete.setForeground(new java.awt.Color(0, 153, 153));
         btndelete.setText("Delete");
-        btndelete.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btndelete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btndelete.setContentAreaFilled(false);
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 220, 80, 30));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 80, 30));
 
         Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
         Button.setBorder(null);
@@ -160,18 +163,19 @@ public class Manage_Category extends javax.swing.JFrame {
         });
         jPanel1.add(Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Untitled design (4).jpg"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 570));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 761, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -326,7 +330,6 @@ setBackground(null);
     private javax.swing.JTable categorytable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField txtname;
