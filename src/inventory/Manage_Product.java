@@ -102,7 +102,6 @@ public class Manage_Product extends javax.swing.JFrame {
         btnclose = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(350, 125));
@@ -112,40 +111,44 @@ public class Manage_Product extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("Manage Product");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 6, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 93, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Price");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 230, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
 
         labelquantity.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelquantity.setForeground(new java.awt.Color(0, 153, 153));
         labelquantity.setText("Quantity");
-        jPanel1.add(labelquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 159, -1, -1));
+        jPanel1.add(labelquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
         jLabel5.setText("jLabel2");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 153, -1, 0));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setText("Cateory");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 373, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
 
         txtname.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 121, 301, -1));
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 301, -1));
 
         txtquantity.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 197, 301, -1));
+        jPanel1.add(txtquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 301, -1));
 
         txtprice.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 265, 301, -1));
+        jPanel1.add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 301, -1));
 
         producttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -162,73 +165,79 @@ public class Manage_Product extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(producttable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 540, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 1050, 610));
 
         boxcategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         boxcategory.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(boxcategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 399, 301, -1));
+        jPanel1.add(boxcategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 301, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Description");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 309, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
 
         txtdescription.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtdescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 335, 301, -1));
+        jPanel1.add(txtdescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 301, -1));
 
         btnsave.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnsave.setForeground(new java.awt.Color(0, 153, 153));
         btnsave.setText("Save");
-        btnsave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        btnsave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btnsave.setContentAreaFilled(false);
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 460, 60, -1));
+        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, 60, -1));
 
         btnupdate.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnupdate.setForeground(new java.awt.Color(0, 153, 153));
         btnupdate.setText("Update");
-        btnupdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        btnupdate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btnupdate.setContentAreaFilled(false);
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 460, 60, -1));
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 60, -1));
 
         btnreset.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnreset.setForeground(new java.awt.Color(0, 153, 153));
         btnreset.setText("Reset");
-        btnreset.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.darkGray, java.awt.Color.black));
+        btnreset.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btnreset.setContentAreaFilled(false);
         btnreset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnresetActionPerformed(evt);
             }
         });
-        jPanel1.add(btnreset, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 60, -1));
+        jPanel1.add(btnreset, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 510, 60, -1));
 
         btnclose.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnclose.setForeground(new java.awt.Color(0, 153, 153));
         btnclose.setText("Close");
-        btnclose.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        btnclose.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btnclose.setContentAreaFilled(false);
         btnclose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncloseActionPerformed(evt);
             }
         });
-        jPanel1.add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 510, 300, -1));
+        jPanel1.add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, 300, -1));
 
         btndelete.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btndelete.setForeground(new java.awt.Color(0, 153, 153));
         btndelete.setText("Delete");
-        btndelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
+        btndelete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
         btndelete.setContentAreaFilled(false);
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 460, 60, -1));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 60, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -240,20 +249,19 @@ public class Manage_Product extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Untitled design (4).jpg"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 570));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -474,7 +482,6 @@ public class Manage_Product extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
