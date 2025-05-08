@@ -67,7 +67,6 @@ public class Order_Receipt extends javax.swing.JFrame {
         ordertext = new javax.swing.JLabel();
         totaltext = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        imagelabel = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
 
@@ -80,9 +79,10 @@ public class Order_Receipt extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("Order Receipt");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 0, 159, 44));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 250, 50));
 
         receipttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,21 +95,25 @@ public class Order_Receipt extends javax.swing.JFrame {
         receipttable.setSelectionBackground(new java.awt.Color(102, 0, 51));
         jScrollPane1.setViewportView(receipttable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 748, 372));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1480, 510));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Order ID: ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 50, 68, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Total Cost");
+        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel3.setText("Total Cost:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 84, -1));
 
         ordertext.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ordertext.setForeground(new java.awt.Color(0, 153, 153));
         ordertext.setText("jLabel4");
         getContentPane().add(ordertext, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 48, 117, 34));
 
         totaltext.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        totaltext.setForeground(new java.awt.Color(0, 153, 153));
         totaltext.setText("jLabel5");
         getContentPane().add(totaltext, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 117, -1));
 
@@ -123,10 +127,6 @@ public class Order_Receipt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
-
-        imagelabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Untitled design (4).jpg"))); // NOI18N
-        imagelabel.setText("jLabel5");
-        getContentPane().add(imagelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -194,7 +194,6 @@ public class Order_Receipt extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel imagelabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
