@@ -82,7 +82,6 @@ public class Manage_Product extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         labelquantity = new javax.swing.JLabel();
@@ -102,6 +101,8 @@ public class Manage_Product extends javax.swing.JFrame {
         btnclose = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(350, 125));
@@ -113,25 +114,20 @@ public class Manage_Product extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel1.setText("Manage Product");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Price");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, -1, -1));
 
         labelquantity.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelquantity.setForeground(new java.awt.Color(0, 153, 153));
         labelquantity.setText("Quantity");
-        jPanel1.add(labelquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
+        jPanel1.add(labelquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
         jLabel5.setText("jLabel2");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 153, -1, 0));
@@ -139,16 +135,16 @@ public class Manage_Product extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setText("Cateory");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, -1, -1));
 
         txtname.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 301, -1));
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 301, -1));
 
         txtquantity.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 301, -1));
+        jPanel1.add(txtquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 301, -1));
 
         txtprice.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 301, -1));
+        jPanel1.add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 301, -1));
 
         producttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,79 +161,79 @@ public class Manage_Product extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(producttable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 1050, 610));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 1050, 550));
 
         boxcategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         boxcategory.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(boxcategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 301, -1));
+        jPanel1.add(boxcategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 520, 301, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Description");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, -1, -1));
 
         txtdescription.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtdescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 301, -1));
+        jPanel1.add(txtdescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, 301, -1));
 
         btnsave.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnsave.setForeground(new java.awt.Color(0, 153, 153));
+        btnsave.setForeground(new java.awt.Color(255, 255, 255));
         btnsave.setText("Save");
-        btnsave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
+        btnsave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnsave.setContentAreaFilled(false);
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, 60, -1));
+        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 60, 30));
 
         btnupdate.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnupdate.setForeground(new java.awt.Color(0, 153, 153));
+        btnupdate.setForeground(new java.awt.Color(255, 255, 255));
         btnupdate.setText("Update");
-        btnupdate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
+        btnupdate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnupdate.setContentAreaFilled(false);
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 60, -1));
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 60, 30));
 
         btnreset.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnreset.setForeground(new java.awt.Color(0, 153, 153));
+        btnreset.setForeground(new java.awt.Color(255, 255, 255));
         btnreset.setText("Reset");
-        btnreset.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
+        btnreset.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnreset.setContentAreaFilled(false);
         btnreset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnresetActionPerformed(evt);
             }
         });
-        jPanel1.add(btnreset, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 510, 60, -1));
+        jPanel1.add(btnreset, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 60, 30));
 
         btnclose.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnclose.setForeground(new java.awt.Color(0, 153, 153));
+        btnclose.setForeground(new java.awt.Color(255, 255, 255));
         btnclose.setText("Close");
-        btnclose.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
+        btnclose.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnclose.setContentAreaFilled(false);
         btnclose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncloseActionPerformed(evt);
             }
         });
-        jPanel1.add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, 300, -1));
+        jPanel1.add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 60, 30));
 
         btndelete.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btndelete.setForeground(new java.awt.Color(0, 153, 153));
+        btndelete.setForeground(new java.awt.Color(255, 255, 255));
         btndelete.setText("Delete");
-        btndelete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 4, true));
+        btndelete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btndelete.setContentAreaFilled(false);
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 60, -1));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 60, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -248,6 +244,20 @@ public class Manage_Product extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel8.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Manage Product");
+        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel8.setOpaque(true);
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1480, 70));
+
+        jLabel1.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel1.setText("  ");
+        jLabel1.setOpaque(true);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 1480, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -485,6 +495,7 @@ public class Manage_Product extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelquantity;
