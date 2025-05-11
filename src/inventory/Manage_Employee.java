@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 import javax.swing.BorderFactory;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -50,11 +51,12 @@ public class Manage_Employee extends javax.swing.JFrame {
         }
         
         setTitle("Employees");
-        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
-        //setSize(1200, 1200);
-        setLocationRelativeTo(null);
+        setUndecorated(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        initComponents();
+        
+         initComponents();
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+            setLocationRelativeTo(null);
         
         // Rounded corners for various components
         UIManager.put("Button.arc", 20); // Buttons
@@ -179,7 +181,15 @@ public class Manage_Employee extends javax.swing.JFrame {
             new String [] {
                 "EmployeeID", "Name", "Email", "Address", "Mobile Number"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable1MouseClicked(evt);

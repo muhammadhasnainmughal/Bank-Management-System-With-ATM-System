@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 import javax.swing.BorderFactory;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -47,11 +48,12 @@ public class Manage_Customer extends javax.swing.JFrame {
         }
         
         setTitle("Customers");
-        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
-        //setSize(1200, 1200);
-        setLocationRelativeTo(null);
+        setUndecorated(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
          initComponents();
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+            setLocationRelativeTo(null);
         
         // Rounded corners for various components
         UIManager.put("Button.arc", 20); // Buttons
@@ -175,7 +177,15 @@ public class Manage_Customer extends javax.swing.JFrame {
             new String [] {
                 "ID", "Name", "Email", "Mobile No:", "Credit"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable1MouseClicked(evt);
@@ -206,7 +216,7 @@ public class Manage_Customer extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 320, -1));
         jPanel1.add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 320, -1));
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 320, 20));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 320, -1));
         jPanel1.add(credit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 320, -1));
 
         btnsave.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

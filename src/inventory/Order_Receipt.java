@@ -11,6 +11,7 @@ import java.awt.Font;
 import java.awt.Insets;
 import java.sql.*;
 import javax.swing.BorderFactory;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -47,11 +48,12 @@ public class Order_Receipt extends javax.swing.JFrame {
         }
         
         setTitle("Order Details");
-        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
-        //setSize(1200, 1200);
-        setLocationRelativeTo(null);
+        setUndecorated(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
          initComponents();
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+            setLocationRelativeTo(null);
         
         // Rounded corners for various components
         UIManager.put("Button.arc", 20); // Buttons
@@ -166,8 +168,16 @@ public class Order_Receipt extends javax.swing.JFrame {
             new String [] {
                 "ID", "Quantity", "Unit Price", "Sub Total", "Product Name"
             }
-        ));
-        receipttable.setSelectionBackground(new java.awt.Color(102, 0, 51));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        receipttable.setSelectionBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(receipttable);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 1480, 480));
