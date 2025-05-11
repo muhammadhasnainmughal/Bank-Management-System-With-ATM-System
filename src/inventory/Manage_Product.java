@@ -374,7 +374,7 @@ public class Manage_Product extends javax.swing.JFrame {
                     total_quantity+= Integer.parseInt(quantity);
                 }
                 Connection con = Conn.getCon();
-                PreparedStatement ps = con.prepareStatement("update product set product_name=?, quantity=?, price=?, Des=?, c_id=? where p_id=?");
+                PreparedStatement ps = con.prepareStatement("update product set product_name=?, quantity=?, price=?, Description=?, c_id=? where p_id=?");
                 ps.setString(1, name);
                 ps.setInt(2, total_quantity);
                 ps.setString(3, price);
@@ -383,7 +383,7 @@ public class Manage_Product extends javax.swing.JFrame {
                 ps.setInt(6, product_id );
 
                 ps.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Updated SuccessFully");
+                JOptionPane.showMessageDialog(null, "Product Updated SuccessFully");
                 setVisible(false);
                 new Manage_Product().setVisible(true);
 
@@ -418,7 +418,7 @@ public class Manage_Product extends javax.swing.JFrame {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("Select * from product p inner join category c using(c_id)");
             while (rs.next()) {
-                model.addRow(new Object[]{rs.getString("p_id"), rs.getString("product_name"), rs.getString("quantity"), rs.getString("price"), rs.getString("Des"), rs.getString("c_id"), rs.getString(7)});
+                model.addRow(new Object[]{rs.getString("p_id"), rs.getString("product_name"), rs.getString("quantity"), rs.getString("price"), rs.getString("Description"), rs.getString("c_id"), rs.getString(7)});
 
             }
         } catch (Exception e) {
@@ -440,7 +440,7 @@ public class Manage_Product extends javax.swing.JFrame {
         } else {
             try {
                 Connection con = Conn.getCon();
-                PreparedStatement ps = con.prepareStatement("insert into product (product_name , quantity , price, Des, c_id) values(? , ? , ? , ? , ? )");
+                PreparedStatement ps = con.prepareStatement("insert into product (product_name , quantity , price, Description, c_id) values(? , ? , ? , ? , ? )");
                 ps.setString(1, name);
                 ps.setString(2, quantity);
                 ps.setString(3, price);
@@ -448,7 +448,7 @@ public class Manage_Product extends javax.swing.JFrame {
                 ps.setString(5, category_id[0]);
 
                 ps.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Added SuccessFully");
+                JOptionPane.showMessageDialog(null, "Product Added SuccessFully");
                 setVisible(false);
                 new Manage_Product().setVisible(true);
 
@@ -477,8 +477,8 @@ public class Manage_Product extends javax.swing.JFrame {
         String price = model.getValueAt(index, 3).toString();
         txtprice.setText(price);
 
-        String Dec = model.getValueAt(index, 4).toString();
-        txtdescription.setText(Dec);
+        String Description = model.getValueAt(index, 4).toString();
+        txtdescription.setText(Description);
 
         boxcategory.removeAllItems();
         String category_id = model.getValueAt(index, 5).toString();

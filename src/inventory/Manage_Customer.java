@@ -159,6 +159,12 @@ public class Manage_Customer extends javax.swing.JFrame {
         btndelete = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        email2 = new javax.swing.JTextField();
+        credit2 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        mobile2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(350, 125));
@@ -175,11 +181,11 @@ public class Manage_Customer extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Email", "Mobile No:", "Credit"
+                "ID", "Name", "Email", "Address", "Mobile No:", "Credit", "Debit", "Balance"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -198,26 +204,26 @@ public class Manage_Customer extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Mobile Number");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Email");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setText("Credit");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 320, -1));
-        jPanel1.add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 320, -1));
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 320, -1));
-        jPanel1.add(credit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 320, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, -1, -1));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 320, -1));
+        jPanel1.add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 320, -1));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 320, -1));
+        jPanel1.add(credit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, 320, -1));
 
         btnsave.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnsave.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,6 +284,26 @@ public class Manage_Customer extends javax.swing.JFrame {
         jLabel1.setText("  ");
         jLabel1.setOpaque(true);
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 1480, 40));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel7.setText("Debit");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel8.setText("Balance");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 610, -1, -1));
+        jPanel1.add(email2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 320, -1));
+
+        credit2.setEditable(false);
+        jPanel1.add(credit2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 320, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel9.setText("Address");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
+        jPanel1.add(mobile2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 320, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -518,7 +544,9 @@ public class Manage_Customer extends javax.swing.JFrame {
     private javax.swing.JButton btndelete;
     private javax.swing.JButton btnsave;
     private javax.swing.JTextField credit;
+    private javax.swing.JTextField credit2;
     private javax.swing.JTextField email;
+    private javax.swing.JTextField email2;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
@@ -527,10 +555,14 @@ public class Manage_Customer extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField mobile;
+    private javax.swing.JTextField mobile2;
     private javax.swing.JTextField name;
     // End of variables declaration//GEN-END:variables
 }
