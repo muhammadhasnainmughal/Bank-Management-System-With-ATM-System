@@ -161,6 +161,8 @@ public class Manage_Employee extends javax.swing.JFrame {
         user_id = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        password = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
@@ -179,11 +181,11 @@ public class Manage_Employee extends javax.swing.JFrame {
 
             },
             new String [] {
-                "EmployeeID", "Name", "Email", "Address", "Mobile Number"
+                "EmployeeID", "Name", "Email", "Password", "Address", "Mobile Number"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -202,14 +204,14 @@ public class Manage_Employee extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Name");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameActionPerformed(evt);
             }
         });
-        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 320, -1));
+        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 320, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 153, 153));
@@ -220,20 +222,20 @@ public class Manage_Employee extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Email");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 320, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 320, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setText("Address");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
 
         address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addressActionPerformed(evt);
             }
         });
-        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 320, -1));
+        getContentPane().add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 320, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -269,17 +271,19 @@ public class Manage_Employee extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 90, 30));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Employee ID");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
+        user_id.setEditable(false);
+        user_id.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         user_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 user_idActionPerformed(evt);
             }
         });
-        getContentPane().add(user_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 320, -1));
+        getContentPane().add(user_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 90, -1));
 
         jLabel6.setBackground(new java.awt.Color(0, 102, 102));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -295,6 +299,12 @@ public class Manage_Employee extends javax.swing.JFrame {
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 1480, 40));
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel8.setText("Password");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 320, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -306,11 +316,11 @@ public class Manage_Employee extends javax.swing.JFrame {
             
             Connection con = Conn.getCon();
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select * from users ");
+            ResultSet rs = st.executeQuery("select * from employees ");
             
             while(rs.next())
             {
-                model.addRow(new Object[]{rs.getString("user_id"),rs.getString("name"),rs.getString("email"),rs.getString("address"),rs.getString("mobile")});
+                model.addRow(new Object[]{rs.getString("user_id"),rs.getString("name"),rs.getString("email"),rs.getString("password"),rs.getString("address"),rs.getString("mobile")});
             }
             
         
@@ -339,14 +349,21 @@ public class Manage_Employee extends javax.swing.JFrame {
         // TODO add your handling code here:
           if(evt.getSource() == jButton1)
         {
+            if(name.getText() != "" && email.getText() != "" && password.getText() != "")
+            {
             String name1=name.getText();
             String mobile1=mobile.getText();
             String email1=email.getText();
-          //  String password1=password.getText();
+            String password1=password.getText();
             String address1=address.getText();
             
             
-            Insert(name1,mobile1,email1,"pass", address1);
+            Insert(name1,mobile1,email1,password1,address1);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Please Enter Customer Details.");
+            }
             
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -359,12 +376,14 @@ public class Manage_Employee extends javax.swing.JFrame {
         
         String name1 = model.getValueAt(index,1).toString();
         name.setText(name1);
-        String mobile1= model.getValueAt(index,4).toString();
+        String mobile1= model.getValueAt(index,5).toString();
         mobile.setText(mobile1);
         String email1= model.getValueAt(index,2).toString();
         email.setText(email1);
-        String address1= model.getValueAt(index,3).toString();
+        String address1= model.getValueAt(index,4).toString();
         address.setText(address1);
+        String password1= model.getValueAt(index,3).toString();
+        password.setText(password1);
         String id =  model.getValueAt(index, 0).toString();
         appuserPK = Integer.parseInt(id);
         user_id.setText(id);
@@ -401,23 +420,17 @@ public class Manage_Employee extends javax.swing.JFrame {
     }
     
      public void update(String name1, String mobile1,String password1, String email1, String address1) {
-          System.out.println("update check");
         Connection con = Conn.getCon();
         PreparedStatement st;
         try {
-            System.out.println("try update check");
-            //int u_id = Integer.parseInt(id);
-            System.out.println("appuserPK : "+appuserPK);
-        st = con.prepareStatement("update users  set  name=('"+name1+"') , email=('"+email1+"') , address= ('"+address1+"') ,password=('"+password1+"') , mobile = ('"+mobile1+"')   where user_id = ('"+appuserPK+"')  ");
+            
+        st = con.prepareStatement("update employees  set  name=('"+name1+"') , email=('"+email1+"') , address= ('"+address1+"') ,password=('"+password1+"') , mobile = ('"+mobile1+"')   where user_id = ('"+appuserPK+"')  ");
         
            st.executeUpdate();
-           JOptionPane.showMessageDialog(null,"Updated");
-                
-           
-           
+           JOptionPane.showMessageDialog(null,"Employee Updated Successfully");
+
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
-            System.out.println("EXception " + ex);
         }
     }
 
@@ -427,20 +440,15 @@ public class Manage_Employee extends javax.swing.JFrame {
             String name1=name.getText();
             String mobile1=mobile.getText();
             String email1=email.getText();
-         //   String password1=password.getText();
+            String password1=password.getText();
             String address1=address.getText();
-            //int  id = user_id.getText();
-             // String user_id1 = String.valueOf(user_id);
               String user_id1 = user_id.getText();
               int id = 0;
               id=Integer.parseInt(user_id1 );
               
-            
-           
-           //  String user_id1 = String.valueOf(user);
              System.out.println("button2: "+id);
-            update(name1,mobile1,"pass",email1, address1);
-          //  update2(name1);
+            update(name1,mobile1,password1,email1, address1);
+     
             setVisible(false);
             new Manage_Employee().setVisible(true);
         }
@@ -462,27 +470,25 @@ public class Manage_Employee extends javax.swing.JFrame {
     
     public void Insert(String name, String mobile, String email, String pass, String address) {
 
-       try {
+        try {
             Connection con = Conn.getCon();
             PreparedStatement st;
-            
-            Random rand = new Random();
-             user = rand.nextInt(1000);
-            st = con.prepareStatement("insert into users (user_id,name,email,address,password,mobile) values (?,?,?,?,?,?)");
-            st.setInt(1, user);
-            st.setString(2, name);
-            st.setString(6, mobile);
-            st.setString(3, email);
-            st.setString(5, pass);
-            st.setString(4, address);
-            
+
+//            Random rand = new Random();
+//             user = rand.nextInt(1000);
+            st = con.prepareStatement("insert into employees (name,email,address,password,mobile) values (?,?,?,?,?)");
+            //st.setInt(1, user);
+            st.setString(1, name);
+            st.setString(5, mobile);
+            st.setString(2, email);
+            st.setString(4, pass);
+            st.setString(3, address);
+
             st.executeUpdate();
-            JOptionPane.showMessageDialog(null,"User Updated");
+            JOptionPane.showMessageDialog(null, "Employee Added Successfully");
             setVisible(false);
             new Manage_Employee().setVisible(true);
-            
 
-           
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
             System.out.println("EXception " + ex);
@@ -532,10 +538,12 @@ public class Manage_Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField mobile;
     private javax.swing.JTextField name;
+    private javax.swing.JTextField password;
     private javax.swing.JTextField user_id;
     // End of variables declaration//GEN-END:variables
 }

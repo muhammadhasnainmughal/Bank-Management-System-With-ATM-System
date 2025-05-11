@@ -282,6 +282,7 @@ public class Manage_Order extends javax.swing.JFrame {
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 1050, 270));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setText("Name");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
@@ -374,10 +375,12 @@ public class Manage_Order extends javax.swing.JFrame {
         jPanel1.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 660, 90, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 153, 153));
         jLabel12.setText("Total Amount Rs:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, -1, 40));
 
         bill.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        bill.setForeground(new java.awt.Color(0, 153, 153));
         bill.setText("0");
         jPanel1.add(bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 650, 130, 40));
 
@@ -427,10 +430,12 @@ public class Manage_Order extends javax.swing.JFrame {
         jPanel1.add(mobile_no, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 300, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 153, 153));
         jLabel13.setText("Mobile No.");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 153, 153));
         jLabel14.setText("Address:");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
@@ -442,6 +447,7 @@ public class Manage_Order extends javax.swing.JFrame {
         jPanel1.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 300, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 153, 153));
         jLabel15.setText("Balance:");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 228, -1, -1));
 
@@ -482,6 +488,7 @@ public class Manage_Order extends javax.swing.JFrame {
         jPanel1.add(pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 670, 140, -1));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 153, 153));
         jLabel18.setText("Pay:");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 650, -1, -1));
 
@@ -493,6 +500,7 @@ public class Manage_Order extends javax.swing.JFrame {
         jPanel1.add(remaining, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 670, 140, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 153, 153));
         jLabel19.setText("Remaining:");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 650, -1, -1));
 

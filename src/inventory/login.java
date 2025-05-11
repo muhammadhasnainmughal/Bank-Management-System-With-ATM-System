@@ -8,6 +8,9 @@ import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneLightIJ
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Insets;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -242,18 +245,37 @@ public class login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
+         Connection con = Conn.getCon();
+  
         if(evt.getSource() == jButton1)
         {
             String username = jTextField1.getText();
             String pass = jPasswordField1.getText();
-            if(username.equals("admin") && pass.equals("admin"))
-            {
+            
+            try {
+            String query = "SELECT * FROM employees WHERE email = ? AND password = ?";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, username);
+            pst.setString(2, pass);
+
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
                 setVisible(false);
                 new first_Page().setVisible(true);
-            }else{
-                JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid username or password!");
             }
+
+            rs.close();
+            pst.close();
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error connecting to database.");
+        }
+             
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
