@@ -12,6 +12,7 @@ import java.awt.Insets;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import javax.swing.BorderFactory;
+import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
@@ -46,11 +47,12 @@ public class Manage_Product extends javax.swing.JFrame {
         }
         
         setTitle("Products");
-        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
-        //setSize(1200, 1200);
-        setLocationRelativeTo(null);
+        setUndecorated(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
          initComponents();
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+            setLocationRelativeTo(null);
         
         // Rounded corners for various components
         UIManager.put("Button.arc", 20); // Buttons
@@ -227,7 +229,15 @@ public class Manage_Product extends javax.swing.JFrame {
             new String [] {
                 "ID", "Name", "Quantity", "Price", "Description", "C_ID", "Category Name"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         producttable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 producttableMouseClicked(evt);

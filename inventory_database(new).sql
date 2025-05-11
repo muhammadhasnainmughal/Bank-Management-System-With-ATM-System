@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `inventory` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `inventory`;
--- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
 --
 -- Host: localhost    Database: inventory
 -- ------------------------------------------------------
--- Server version	8.0.36
+-- Server version	9.1.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,29 +14,6 @@ USE `inventory`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `admin`
---
-
-DROP TABLE IF EXISTS `admin`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `admin` (
-  `username` varchar(30) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `admin`
---
-
-LOCK TABLES `admin` WRITE;
-/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `category`
@@ -72,11 +47,14 @@ DROP TABLE IF EXISTS `customer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customer` (
-  `id` int NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `mobile_number` varchar(11) DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `contact_no` varchar(20) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `credit` int DEFAULT NULL,
+  `credit` int DEFAULT '0',
+  `debit` int DEFAULT '0',
+  `balance` int GENERATED ALWAYS AS ((`credit` - `debit`)) STORED,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -87,8 +65,36 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'Ehsan','02344151','KHATYwala@gmail.com',20000),(586,'Usman','03042029997','usman@gmail.com',0);
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `employees`
+--
+
+DROP TABLE IF EXISTS `employees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `employees` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `mobile` varchar(30) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=529 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employees`
+--
+
+LOCK TABLES `employees` WRITE;
+/*!40000 ALTER TABLE `employees` DISABLE KEYS */;
+INSERT INTO `employees` VALUES (12,'usman11','dvdkndkvkvd','shkdkdjsv','','020320293'),(240,'Khan','usman@gmail.com','SUKKUR','1122','023-11-2334'),(480,'','','','pass',''),(485,'Farhan','farhanali','gtk','','132411'),(486,'usmanx','www','','','drrex'),(528,'Shah Jahan','shahjahan@gmail.com','Lundo','Lpychar','03044323424');
+/*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -107,7 +113,7 @@ CREATE TABLE `orderdetails` (
   KEY `ProductID` (`ProductID`),
   KEY `OrderID` (`OrderID`),
   CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`ProductID`) REFERENCES `product` (`p_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`OrderID`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`ORDERID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -117,7 +123,6 @@ CREATE TABLE `orderdetails` (
 
 LOCK TABLES `orderdetails` WRITE;
 /*!40000 ALTER TABLE `orderdetails` DISABLE KEYS */;
-INSERT INTO `orderdetails` VALUES (624203,2,100,3000,300000),(349187,2,5,3000,500),(855575,1,333,1000,400000),(98717,2,100,3000,300000),(98129,1,7,1000,7000),(680697,1,1,1000,3000),(680697,2,1,3000,3000),(461043,1,9,1000,9000),(490985,2,5,3000,5000),(490985,1,5,1000,5000);
 /*!40000 ALTER TABLE `orderdetails` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,8 +136,9 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `TotalCost` int DEFAULT NULL,
   `customer_id` int DEFAULT NULL,
-  `OrderID` int NOT NULL,
-  PRIMARY KEY (`OrderID`),
+  `ORDERID` int NOT NULL AUTO_INCREMENT,
+  `pay_amount` int DEFAULT NULL,
+  PRIMARY KEY (`ORDERID`),
   KEY `customer_id` (`customer_id`),
   CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -144,7 +150,6 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (7000,586,98129),(900000,586,98717),(300500,586,349187),(9000,586,461043),(8000,1,490985),(300000,1,624203),(4000,586,680697),(400000,1,855575);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,7 +165,7 @@ CREATE TABLE `product` (
   `product_name` varchar(255) NOT NULL,
   `quantity` int DEFAULT NULL,
   `price` int DEFAULT NULL,
-  `Des` varchar(255) DEFAULT NULL,
+  `Description` varchar(255) DEFAULT NULL,
   `c_id` int DEFAULT NULL,
   PRIMARY KEY (`p_id`),
   KEY `c_id` (`c_id`),
@@ -175,37 +180,8 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,'Dell',45,1000,'New 10/10',1),(2,'Laptop',95,3000,'10/10',1);
+INSERT INTO `product` VALUES (1,'Dell',35,1000,'New 10/10',1),(2,'Laptop',75,3000,'10/10',1);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `users` (
-  `user_id` int NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `mobile` varchar(30) NOT NULL,
-  PRIMARY KEY (`user_id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (12,'usman11','dvdkndkvkvd','shkdkdjsv','','020320293'),(240,'Khan','usman@gmail.com','SUKKUR','1122','023-11-2334'),(485,'Farhan','farhanali','gtk','','132411'),(486,'usmanx','www','','','drrex'),(528,'Shah Jahan','shahjahan@gmail.com','Lundo','Lpychar','03044323424');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -217,4 +193,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-14 18:29:48
+-- Dump completed on 2025-05-11 21:00:52

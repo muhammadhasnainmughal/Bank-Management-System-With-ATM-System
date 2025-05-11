@@ -15,6 +15,7 @@ import java.awt.Font;
 import java.awt.Insets;
 import java.awt.Toolkit;
 import javax.swing.BorderFactory;
+import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
@@ -46,11 +47,12 @@ public class Manage_Category extends javax.swing.JFrame {
         }
         
         setTitle("Categories");
-        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
-        //setSize(1200, 1200);
-        setLocationRelativeTo(null);
+        setUndecorated(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
          initComponents();
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+            setLocationRelativeTo(null);
         
         // Rounded corners for various components
         UIManager.put("Button.arc", 20); // Buttons
@@ -197,7 +199,7 @@ public class Manage_Category extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Name");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
-        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 320, 20));
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 320, -1));
 
         categorytable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
         categorytable.setModel(new javax.swing.table.DefaultTableModel(
@@ -207,7 +209,15 @@ public class Manage_Category extends javax.swing.JFrame {
             new String [] {
                 "ID", "Name"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         categorytable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 categorytableMouseClicked(evt);

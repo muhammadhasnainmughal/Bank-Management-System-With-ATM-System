@@ -4,7 +4,9 @@
  */
 package inventory;
 import java.sql.*;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -18,7 +20,12 @@ public class order_details extends javax.swing.JFrame {
      * Creates new form order_details
      */
     public order_details() {
-        initComponents();
+        setUndecorated(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+         initComponents();
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+            setLocationRelativeTo(null);
     }
 
     /**
@@ -58,8 +65,16 @@ public class order_details extends javax.swing.JFrame {
             new String [] {
                 "ID", "Name", "Phone No"
             }
-        ));
-        ctable.setSelectionBackground(new java.awt.Color(153, 0, 51));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        ctable.setSelectionBackground(new java.awt.Color(255, 255, 255));
         ctable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ctableMouseClicked(evt);
@@ -76,9 +91,16 @@ public class order_details extends javax.swing.JFrame {
             new String [] {
                 "OrderID", "Total Cost"
             }
-        ));
-        ordertable.setColumnSelectionAllowed(true);
-        ordertable.setSelectionBackground(new java.awt.Color(153, 0, 51));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        ordertable.setSelectionBackground(new java.awt.Color(255, 255, 255));
         ordertable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ordertableMouseClicked(evt);

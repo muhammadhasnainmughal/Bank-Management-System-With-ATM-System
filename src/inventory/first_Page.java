@@ -12,6 +12,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Insets;
 import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 import javax.swing.plaf.FontUIResource;
 
 /**
@@ -25,99 +27,17 @@ public class first_Page extends javax.swing.JFrame {
      */
     public first_Page() {
         
-        try{
-            
-            UIManager.setLookAndFeel(new FlatAtomOneLightIJTheme());
-            // Apply global font for the UI
-            UIManager.put("defaultFont", new FontUIResource(new Font("Segoe UI", Font.PLAIN, 14)));
-
-        }
-        catch(UnsupportedLookAndFeelException e){
-            
-            e.printStackTrace();
-        }
+       
         
         setTitle("Home");
-        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("blogg.png")));
-        //setSize(1200, 1200);
-        setLocationRelativeTo(null);
+        setUndecorated(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        initComponents();
         
-        // Rounded corners for various components
-        UIManager.put("Button.arc", 20); // Buttons
-        UIManager.put("TextField.arc", 15); // Text fields
-        UIManager.put("PasswordField.arc", 15); // Password fields
-        UIManager.put("Spinner.arc", 10); // Spinners
-        UIManager.put("ProgressBar.arc", 10); // Progress bars
-        UIManager.put("TabbedPane.tabInsets", new Insets(10, 20, 10, 20)); // Tab padding
-        UIManager.put("TextArea.arc", 10); // Rounded corners for text area
-        UIManager.put("TextComponent.arc", 10); // Text components
-
-        // Color palette for modern feel
-        UIManager.put("Component.focusColor", new Color(100, 149, 237)); // Focus color
-        UIManager.put("Component.focusWidth", 2); // Focus border width
-        UIManager.put("Button.background", new Color(240, 240, 255)); // Button background
-        UIManager.put("Button.hoverBackground", new Color(220, 230, 255)); // Button hover
-        UIManager.put("Button.focusedBackground", new Color(190, 210, 255)); // Button focused
-        UIManager.put("Button.foreground", Color.BLACK); // Button text
-        UIManager.put("Button.disabledText", new Color(150, 150, 150)); // Disabled button text
-        UIManager.put("Panel.background", new Color(245, 245, 250)); // Panel background
-        UIManager.put("TabbedPane.underlineColor", new Color(100, 149, 237)); // Underline for active tab
-        UIManager.put("TabbedPane.contentAreaColor", new Color(245, 245, 245)); // Tab pane background
-        UIManager.put("TabbedPane.tabAreaBackground", new Color(240, 240, 240)); // Tab area background
-        UIManager.put("TabbedPane.hoverColor", new Color(190, 210, 240)); // Hover color for tabs
-        UIManager.put("ScrollBar.thumb", new Color(180, 180, 180)); // Scrollbar thumb color
-        UIManager.put("ScrollBar.hoverThumb", new Color(160, 160, 160)); // Scrollbar hover
-        UIManager.put("ScrollBar.thumbArc", 10); // Rounded scrollbar thumb
-        UIManager.put("ScrollBar.thumbInsets", new Insets(2, 2, 2, 2)); // Spacing inside scrollbar thumb
-        UIManager.put("ScrollBar.track", new Color(230, 230, 230)); // Track color
-
-        // Shadowing and borders
-        UIManager.put("Button.shadowWidth", 3); // Button shadow width
-        UIManager.put("PopupMenu.border", BorderFactory.createLineBorder(new Color(200, 200, 200))); // Popup menu border
-        UIManager.put("Menu.shadowColor", new Color(200, 200, 200, 100)); // Menu shadow
-        UIManager.put("TextField.borderWidth", 2); // TextField border width
-        UIManager.put("Separator.foreground", new Color(200, 200, 200)); // Divider lines
-        UIManager.put("Separator.background", new Color(245, 245, 245)); // Divider background
-
-        // Text highlights and selection
-        UIManager.put("TextField.selectionBackground", new Color(180, 220, 250)); // Text selection background
-        UIManager.put("TextField.selectionForeground", Color.BLACK); // Text selection foreground
-        UIManager.put("TextArea.background", new Color(245, 245, 250)); // TextArea background
-        UIManager.put("TextArea.selectionBackground", new Color(180, 220, 250)); // TextArea selection
-        UIManager.put("TextPane.background", new Color(250, 250, 255)); // TextPane background
-
-        // Tooltips and dialogs
-        UIManager.put("ToolTip.background", new Color(250, 250, 200)); // Tooltip background
-        UIManager.put("ToolTip.border", BorderFactory.createLineBorder(new Color(200, 200, 150))); // Tooltip border
-        UIManager.put("OptionPane.messageFont", new Font("SansSerif", Font.PLAIN, 14)); // Dialog font
-        UIManager.put("OptionPane.background", new Color(240, 240, 255)); // Dialog background
-        UIManager.put("OptionPane.messageForeground", Color.BLACK); // Dialog text color
-
-        // Fonts for consistency
-        Font defaultFont = new Font("Segoe UI", Font.PLAIN, 14);
-        UIManager.put("defaultFont", defaultFont); // Apply font across all components
-        UIManager.put("Menu.font", defaultFont); // Menu font
-        UIManager.put("Button.font", defaultFont); // Button font
-        UIManager.put("TabbedPane.font", new Font("Segoe UI Semibold", Font.PLAIN, 13)); // Tabs font
-        UIManager.put("Label.font", defaultFont); // Labels
-        UIManager.put("CheckBox.font", defaultFont); // Checkboxes
-
-        // Menu hover and selection
-        UIManager.put("Menu.hoverBackground", new Color(230, 240, 255)); // Menu hover
-        UIManager.put("Menu.selectionBackground", new Color(100, 149, 237)); // Selected menu background
-        UIManager.put("Menu.selectionForeground", Color.BLACK); // Selected menu text
-        UIManager.put("MenuItem.selectionBackground", new Color(220, 220, 250)); // Selected menu item background
-        UIManager.put("MenuItem.selectionForeground", Color.BLACK); // Selected menu item text
-        UIManager.put("MenuItem.selectionType", "underline"); // Menu highlight style
-
-        // ProgressBar styling
-        UIManager.put("ProgressBar.foreground", new Color(100, 180, 255)); // Progress bar foreground
-        UIManager.put("ProgressBar.background", new Color(220, 230, 240)); // Progress bar background
-        UIManager.put("ProgressBar.selectionForeground", Color.BLACK); // Progress text foreground
-        UIManager.put("ProgressBar.selectionBackground", Color.WHITE); // Progress text background
-
+         initComponents();
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+            setLocationRelativeTo(null);
+        
+        
         
     }
 
@@ -137,6 +57,8 @@ public class first_Page extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -208,7 +130,7 @@ public class first_Page extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 760, 70));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, 760, 70));
 
         jButton7.setBackground(new java.awt.Color(0, 153, 153));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -235,6 +157,14 @@ public class first_Page extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 370, 70));
+
+        jLabel5.setFont(new java.awt.Font("Script MT Bold", 1, 36)); // NOI18N
+        jLabel5.setText("Welcome To Inventory Managemnt System ");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 40)); // NOI18N
+        jLabel3.setText("Main Menu");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 240, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -337,5 +267,7 @@ public class first_Page extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
