@@ -4,7 +4,6 @@
  */
 package inventory;
 
-import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneLightIJTheme;
 import java.awt.Color;
 import java.awt.Font;
@@ -14,7 +13,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -151,8 +149,8 @@ public class Manage_Customer extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
         mobile = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
-        credit = new javax.swing.JTextField();
+        address = new javax.swing.JTextField();
+        debit = new javax.swing.JTextField();
         btnsave = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -161,10 +159,10 @@ public class Manage_Customer extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        email2 = new javax.swing.JTextField();
-        credit2 = new javax.swing.JTextField();
+        balance = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        mobile2 = new javax.swing.JTextField();
+        credit = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(350, 125));
@@ -222,8 +220,10 @@ public class Manage_Customer extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, -1, -1));
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 320, -1));
         jPanel1.add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 320, -1));
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 320, -1));
-        jPanel1.add(credit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, 320, -1));
+
+        address.setName(""); // NOI18N
+        jPanel1.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 320, -1));
+        jPanel1.add(debit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 320, -1));
 
         btnsave.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnsave.setForeground(new java.awt.Color(255, 255, 255));
@@ -294,16 +294,16 @@ public class Manage_Customer extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("Balance");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 610, -1, -1));
-        jPanel1.add(email2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 320, -1));
 
-        credit2.setEditable(false);
-        jPanel1.add(credit2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 320, -1));
+        balance.setEditable(false);
+        jPanel1.add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 320, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 153));
         jLabel9.setText("Address");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
-        jPanel1.add(mobile2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 320, -1));
+        jPanel1.add(credit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, 320, -1));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 320, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -343,7 +343,7 @@ public class Manage_Customer extends javax.swing.JFrame {
             
             while(rs.next())
             {
-                model.addRow(new Object[] {  rs.getInt("id"), rs.getString("name"), rs.getString("mobile_number"), rs.getString("email") , rs.getInt("credit") });
+                model.addRow(new Object[] {  rs.getInt("id"), rs.getString("name"), rs.getString("email"), rs.getString("address"), rs.getString("contact_no"), rs.getInt("credit"), rs.getInt("debit"), rs.getInt("balance") });
             }
            
         }
@@ -368,22 +368,22 @@ public class Manage_Customer extends javax.swing.JFrame {
     
     String name1;
     String mobile1;
+    String address1;
     String email1;
     String credit1;
+    String debit1;
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
          if(evt.getSource() == btnsave)
         {
             
-                
-            
              name1=name.getText();
              mobile1=mobile.getText();
              email1=email.getText();
-            // password1=password.getText();
-           // String credit1= (String) credit.toString();
+             address1=address.getText();
              credit1 = credit.getText();
+             debit1 = debit.getText();
             if(validatefield()){
-            Insert(name1,mobile1,email1, credit1);
+            Insert(name1,mobile1,address1,email1, credit1, debit1);
             }else{
                 JOptionPane.showMessageDialog(null, "Fill all fields");
             }
@@ -396,9 +396,11 @@ public class Manage_Customer extends javax.swing.JFrame {
         {
             String name1=name.getText();
             String mobile1=mobile.getText();
+            String address1=address.getText();
             String email1=email.getText();
             String credit1=credit.getText();
-            update(name1,mobile1,email1, credit1);
+            String debit1=debit.getText();
+            update(name1, mobile1, address1, email1, credit1, debit1);
             
             setVisible(false);
             new Manage_Customer().setVisible(true);
@@ -417,12 +419,18 @@ public class Manage_Customer extends javax.swing.JFrame {
         customerID=model.getValueAt(index,0).toString();
         String name1 = model.getValueAt(index,1).toString();
         name.setText(name1);
-        String mobile1= model.getValueAt(index,3).toString();
-        mobile.setText(mobile1);
-        String email1= model.getValueAt(index,2).toString();
+        String email1 = model.getValueAt(index,2).toString();
         email.setText(email1);
-        String credit1= model.getValueAt(index,4).toString();
+        String address1 = model.getValueAt(index,3).toString();
+        address.setText(address1);
+        String mobile1= model.getValueAt(index,4).toString();
+        mobile.setText(mobile1);
+        String credit1= model.getValueAt(index,5).toString();
         credit.setText(credit1);
+        String debit1= model.getValueAt(index,6).toString();
+        debit.setText(debit1);
+        String balance1= model.getValueAt(index,7).toString();
+        balance.setText(balance1);
         String id =  model.getValueAt(index, 0).toString();
         appuserPK = Integer.parseInt(id);
         //user_id.setText(id);
@@ -440,7 +448,7 @@ public class Manage_Customer extends javax.swing.JFrame {
                 PreparedStatement ps= con.prepareStatement("delete from customer where id=?");
                 ps.setString(1, customerID);
                 ps.executeUpdate();
-                JOptionPane.showMessageDialog(null,"Deleted SuccessFully");
+                JOptionPane.showMessageDialog(null,"Customer Deleted SuccessFully");
                 setVisible(false);
                 new Manage_Customer().setVisible(true);
             }catch(Exception e){
@@ -448,21 +456,21 @@ public class Manage_Customer extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_btndeleteActionPerformed
 
-    public void update(String name1, String mobile1, String email1, String credit1) {
+    public void update(String name1, String mobile1, String address1, String email1, String credit1, String debit1) {
          
         Connection con = Conn.getCon();
         PreparedStatement st;
         try {
-            System.out.println("try update check");
             //int u_id = Integer.parseInt(id);
             int credit = Integer.parseInt(credit1);
+            int debit = Integer.parseInt(debit1);
             System.out.println("appuserPK : "+appuserPK);
-           st = con.prepareStatement("update customer  set  name= ('"+name1+"'),mobile_number= ('"+mobile1+"'), email= ('"+email1+"') ,credit = ('"+credit+"')  where id = ('"+appuserPK+"')");
+           st = con.prepareStatement("update customer  set  name= ('"+name1+"'),contact_no= ('"+mobile1+"'), address= ('"+address1+"'), email= ('"+email1+"') ,credit = ('"+credit+"'), debit = ('"+debit+"')  where id = ('"+appuserPK+"')");
            
            st.executeUpdate();
            
            //st.executeQuery();
-           JOptionPane.showMessageDialog(null,"Updated");
+           JOptionPane.showMessageDialog(null,"Customer Updated Successfully");
                 
            
            
@@ -472,7 +480,7 @@ public class Manage_Customer extends javax.swing.JFrame {
         }
     }
 
-    public void Insert(String name, String mobile, String email, String credit) {
+    public void Insert(String name, String mobile, String address, String email, String credit, String debit) {
 
        try {
             Connection con = Conn.getCon();
@@ -480,18 +488,22 @@ public class Manage_Customer extends javax.swing.JFrame {
             
             
             int credit1 = Integer.parseInt(credit);
-            Random rand = new Random();
+            int debit1 = Integer.parseInt(debit);
             
-             int c_id = rand.nextInt(1000); 
-            st = con.prepareStatement("insert into customer (id,name,mobile_number,email,credit) values (?,?,?,?,?)");
-            st.setInt(1, c_id);
-            st.setString(2, name);
-            st.setString(3, mobile);
+//            Random rand = new Random();
+//             int c_id = rand.nextInt(1000); 
+
+            st = con.prepareStatement("insert into customer (name,contact_no,address,email,credit,debit) values (?,?,?,?,?,?)");
+            //st.setInt(1, c_id);
+            st.setString(1, name);
+            st.setString(2, mobile);
+            st.setString(3, address);
             st.setString(4, email);
             st.setInt(5, credit1);
+            st.setInt(6, debit1);
             
             st.executeUpdate();
-            JOptionPane.showMessageDialog(null,"User Updated");
+            JOptionPane.showMessageDialog(null,"Customer Added Successfully");
             setVisible(false);
             new Manage_Customer().setVisible(true);
             
@@ -541,12 +553,13 @@ public class Manage_Customer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField address;
+    private javax.swing.JTextField balance;
     private javax.swing.JButton btndelete;
     private javax.swing.JButton btnsave;
     private javax.swing.JTextField credit;
-    private javax.swing.JTextField credit2;
+    private javax.swing.JTextField debit;
     private javax.swing.JTextField email;
-    private javax.swing.JTextField email2;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
@@ -562,7 +575,6 @@ public class Manage_Customer extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField mobile;
-    private javax.swing.JTextField mobile2;
     private javax.swing.JTextField name;
     // End of variables declaration//GEN-END:variables
 }

@@ -154,7 +154,7 @@ public class Manage_Order extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         pname = new javax.swing.JTextField();
-        quantity = new javax.swing.JTextField();
+        pay = new javax.swing.JTextField();
         price = new javax.swing.JTextField();
         desc = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -165,11 +165,13 @@ public class Manage_Order extends javax.swing.JFrame {
         bill = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         select_customer = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         mobile_no = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        quantity1 = new javax.swing.JTextField();
+        quantity = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         address = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         balance = new javax.swing.JTextField();
@@ -177,10 +179,13 @@ public class Manage_Order extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         balance1 = new javax.swing.JTextField();
         address1 = new javax.swing.JTextField();
-        pay = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         remaining = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
+        price2 = new javax.swing.JTextField();
+        desc1 = new javax.swing.JTextField();
+        tbal = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -196,7 +201,7 @@ public class Manage_Order extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Mobile No:", "Address", "Credit"
+                "ID", "Name", "Mobile No:", "Address", "Balance"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -319,7 +324,13 @@ public class Manage_Order extends javax.swing.JFrame {
             }
         });
         jPanel1.add(pname, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 200, -1));
-        jPanel1.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 210, -1));
+
+        pay.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                payCaretUpdate(evt);
+            }
+        });
+        jPanel1.add(pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 670, 140, -1));
         jPanel1.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 320, 210, -1));
 
         desc.addActionListener(new java.awt.event.ActionListener() {
@@ -405,14 +416,6 @@ public class Manage_Order extends javax.swing.JFrame {
         });
         jPanel1.add(select_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 130, 30));
 
-        jLabel6.setBackground(new java.awt.Color(0, 102, 102));
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 1050, 80));
-
         jLabel7.setBackground(new java.awt.Color(0, 102, 102));
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -438,6 +441,21 @@ public class Manage_Order extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(0, 153, 153));
         jLabel14.setText("Address:");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+
+        quantity1.setEditable(false);
+        quantity1.setBackground(new java.awt.Color(0, 153, 153));
+        quantity1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        quantity1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(quantity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 60, -1));
+        jPanel1.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 150, -1));
+
+        jLabel6.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel6.setOpaque(true);
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 1050, 80));
 
         address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -480,13 +498,6 @@ public class Manage_Order extends javax.swing.JFrame {
         });
         jPanel1.add(address1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 300, -1));
 
-        pay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                payActionPerformed(evt);
-            }
-        });
-        jPanel1.add(pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 670, 140, -1));
-
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 153, 153));
         jLabel18.setText("Pay:");
@@ -503,6 +514,24 @@ public class Manage_Order extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(0, 153, 153));
         jLabel19.setText("Remaining:");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 650, -1, -1));
+        jPanel1.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 320, 210, -1));
+
+        desc1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desc1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(desc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 210, -1));
+
+        tbal.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tbal.setForeground(new java.awt.Color(0, 153, 153));
+        tbal.setText("0");
+        jPanel1.add(tbal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 680, 130, 40));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel20.setText("Total Balance Rs:");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 680, -1, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -555,7 +584,7 @@ public class Manage_Order extends javax.swing.JFrame {
             
             while(rs.next() )
             {
-                model.addRow(new Object[]{rs.getString("id"),rs.getString("name"),rs.getString("mobile_number"),rs.getString("email"),rs.getString("credit")});
+                model.addRow(new Object[]{rs.getString("id"),rs.getString("name"),rs.getString("contact_no"),rs.getString("address"),rs.getString("balance")});
            
             }
             
@@ -579,7 +608,7 @@ public class Manage_Order extends javax.swing.JFrame {
             
             while(rs.next() )
             {
-               model2.addRow(new Object[]{rs.getString("p_id"),rs.getString("product_name"),rs.getString("quantity"),rs.getString("price"),rs.getString("Des"),});
+               model2.addRow(new Object[]{rs.getString("p_id"),rs.getString("product_name"),rs.getString("quantity"),rs.getString("price"),rs.getString("Description"),});
            
             }
             
@@ -592,15 +621,7 @@ public class Manage_Order extends javax.swing.JFrame {
             System.out.println("EXception " + ex);
         }
         
-        
-        
-            
-             
-        
-        
-        
-     
-        
+      
     }//GEN-LAST:event_formComponentShown
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
@@ -612,13 +633,24 @@ public class Manage_Order extends javax.swing.JFrame {
         
         String name1 = model.getValueAt(index,1).toString();
         cname.setText(name1);
+        
+        String mobile_no1 = model.getValueAt(index,2).toString();
+        mobile_no.setText(mobile_no1);
+        
+        String address1 = model.getValueAt(index,3).toString();
+        address.setText(address1);
+        
+        String balance1 = model.getValueAt(index,4).toString();
+        balance.setText(balance1);
+        tbal.setText(balance1);
+        
       
         
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void ptableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ptableMouseClicked
         // TODO add your handling code here:
-        quantity.setText("");
+        pay.setText("");
        int index = ptable.getSelectedRow();
         TableModel model = ptable.getModel();
         String id = model.getValueAt(index, 0).toString();
@@ -627,6 +659,8 @@ public class Manage_Order extends javax.swing.JFrame {
         String name = model.getValueAt(index, 1).toString();
         pname.setText(name);
 
+        String quan = model.getValueAt(index, 2).toString();
+        quantity1.setText(quan);
         
         String price1 = model.getValueAt(index, 3).toString();
         price.setText(price1);
@@ -634,12 +668,6 @@ public class Manage_Order extends javax.swing.JFrame {
         String Dec = model.getValueAt(index, 4).toString();
         desc.setText(Dec);
 
-       
-                                          
-
-        
-        
-        
     }//GEN-LAST:event_ptableMouseClicked
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
@@ -700,7 +728,15 @@ public class Manage_Order extends javax.swing.JFrame {
               
                     b=b +subtotal;// to print updated bill  in the text field of Total amount right after the button is pressed Add to Cart 
                     bill.setText(String.valueOf(b));
-
+                    
+                    int bal = Integer.parseInt (balance.getText());
+        
+                    int rem = (bal + b);
+        
+                    String tot = Integer.toString(rem);
+        
+                    tbal.setText(tot);
+                    
                 }
                 else{
                     id1 = Integer.parseInt(rs.getString("p_id"));
@@ -709,6 +745,7 @@ public class Manage_Order extends javax.swing.JFrame {
                 System.out.println("in while");
                 remove.setEnabled(true);
                 reset.setEnabled(true);
+                quantity.setText("");
               
             }
             }
@@ -746,7 +783,7 @@ public class Manage_Order extends javax.swing.JFrame {
        
         
     if(cartTable.getRowCount()==0){
-        JOptionPane.showMessageDialog(null , "*Add some product to confirm*");
+        JOptionPane.showMessageDialog(null , "Add some product to confirm");
     }
     else{
         // inserting data into orders table
@@ -762,14 +799,17 @@ public class Manage_Order extends javax.swing.JFrame {
             
             int customer = Integer.parseInt(c_id);
            int totalcost = Integer.parseInt (bill.getText());
-            st = con.prepareStatement("insert into orders values (?,?,?)");
+           int pay1 = Integer.parseInt (pay.getText());
+            st = con.prepareStatement("insert into orders (ORDERID,customer_id,TotalCost,pay_amount) values (?,?,?,?)");
             
-            st.setInt(3, order_id);
-            st.setInt(1, totalcost);
+            
+            st.setInt(4, pay1);
+            st.setInt(3, totalcost);
             st.setInt(2, customer);
+            st.setInt(1, order_id);
             
             st.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Orders data save Generated");
+            JOptionPane.showMessageDialog(null,"Invoice Data Added Successfully");
                        
             
         }
@@ -792,7 +832,8 @@ public class Manage_Order extends javax.swing.JFrame {
         while(row_count!=0){
             int prodID= Integer.parseInt(model.getValueAt(row_index,0).toString());
             int unit_price= Integer.parseInt(model.getValueAt(row_index,3).toString());
-            int q= Integer.parseInt(quantity.getText());
+            int q = Integer.parseInt(model.getValueAt(row_index,2).toString());
+//int q= Integer.parseInt(quantity.getText());
          
         
         try
@@ -806,7 +847,7 @@ public class Manage_Order extends javax.swing.JFrame {
             ps.setInt(1, order_id);
             ps.setInt(2, prodID);
             ps.setInt(3, q);
-            ps.setInt(4, unit_price );
+            ps.setInt(4, unit_price);
             ps.setInt(5, subtotal); 
             ps.executeUpdate();
             
@@ -825,7 +866,33 @@ public class Manage_Order extends javax.swing.JFrame {
         row_index++;
         
         }
-        JOptionPane.showMessageDialog(null,"order details Updated");
+        
+        try
+        {
+          Connection con = Conn.getCon();
+          PreparedStatement ps;
+          
+            
+            ps = con.prepareStatement("update customer set debit=?,credit=? where id=?");
+            
+            int pay1 = Integer.parseInt (pay.getText());
+            int debit1 = Integer.parseInt (tbal.getText());
+            int customer1 = Integer.parseInt(c_id);
+            
+            ps.setInt(2,pay1);
+            ps.setInt(1,debit1);
+            ps.setInt(3,customer1);
+            ps.executeUpdate();
+  
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null , e);
+        }
+        
+        JOptionPane.showMessageDialog(null,"Invoice Added Successfully");
+        setVisible(false);
+        new Manage_Order().setVisible(true);
     }    
  
         
@@ -846,11 +913,11 @@ public class Manage_Order extends javax.swing.JFrame {
 //        
 //        String c_id = model1.getValueAt(index1,0).toString();
 //         
-       Random rand =  new Random();
-        
-       order_id = rand.nextInt(1000000);   
-
-            JOptionPane.showMessageDialog(null , order_id);
+      Random rand =  new Random();
+//        
+      order_id = rand.nextInt(10000);   
+//
+          JOptionPane.showMessageDialog(null , "Your Order ID is: " + order_id);
          jButton1.setEnabled(true);
 
     }//GEN-LAST:event_select_customerActionPerformed
@@ -909,13 +976,29 @@ public class Manage_Order extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_address1ActionPerformed
 
-    private void payActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_payActionPerformed
-
     private void remainingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_remainingActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_remainingActionPerformed
+
+    private void payCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_payCaretUpdate
+        // TODO add your handling code here:
+        
+        int pay1 = Integer.parseInt (pay.getText());
+        int total = Integer.parseInt (bill.getText());
+        int bal = Integer.parseInt (balance.getText());
+        
+        int rem = (total + bal) - pay1;
+        
+        String rem1 = Integer.toString(rem);
+        
+        remaining.setText(rem1);
+        
+        
+    }//GEN-LAST:event_payCaretUpdate
+
+    private void desc1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desc1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desc1ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -961,6 +1044,7 @@ public class Manage_Order extends javax.swing.JFrame {
     private javax.swing.JTable cartTable;
     private javax.swing.JTextField cname;
     private javax.swing.JTextField desc;
+    private javax.swing.JTextField desc1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
@@ -974,6 +1058,7 @@ public class Manage_Order extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -988,15 +1073,16 @@ public class Manage_Order extends javax.swing.JFrame {
     private javax.swing.JTextField pay;
     private javax.swing.JTextField pname;
     private javax.swing.JTextField price;
+    private javax.swing.JTextField price2;
     private javax.swing.JTable ptable;
     private javax.swing.JTextField quantity;
+    private javax.swing.JTextField quantity1;
     private javax.swing.JTextField remaining;
     private javax.swing.JButton remove;
     private javax.swing.JButton reset;
     private javax.swing.JButton select_customer;
+    private javax.swing.JLabel tbal;
     // End of variables declaration//GEN-END:variables
 
-    private int getValueOf(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+  
 }
