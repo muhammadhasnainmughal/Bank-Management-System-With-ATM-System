@@ -89,11 +89,11 @@ public class order_details extends javax.swing.JFrame {
 
             },
             new String [] {
-                "OrderID", "Total Cost"
+                "OrderID", "Total Cost", "Pay Amount"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -151,9 +151,9 @@ public class order_details extends javax.swing.JFrame {
 
             Connection con = Conn.getCon();
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("Select id , name , mobile_number from customer");
+            ResultSet rs = st.executeQuery("Select id , name , contact_no from customer");
             while (rs.next()) {
-                model.addRow(new Object[]{rs.getString("id"), rs.getString("name"), rs.getString("mobile_number")});
+                model.addRow(new Object[]{rs.getString("id"), rs.getString("name"), rs.getString("contact_no")});
 
             }
         } catch (SQLException e) {
@@ -174,7 +174,7 @@ public class order_details extends javax.swing.JFrame {
             ResultSet rs = st.executeQuery("Select * from orders where customer_id='"+cid+"'");
             
             while (rs.next()) {
-                model1.addRow(new Object[]{rs.getString("OrderID"), rs.getString("TotalCost")});
+                model1.addRow(new Object[]{rs.getString("OrderID"), rs.getString("TotalCost"), rs.getString("pay_amount")});
 
             }
         } catch (Exception e) {

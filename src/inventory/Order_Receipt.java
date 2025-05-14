@@ -166,7 +166,7 @@ public class Order_Receipt extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Quantity", "Unit Price", "Sub Total", "Product Name"
+                "ID", "Product Name", "Quantity", "Unit Price", "Sub Total"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -182,25 +182,25 @@ public class Order_Receipt extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 1480, 480));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Order ID: ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 68, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, 30));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Total Cost:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 84, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 100, -1));
 
-        ordertext.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ordertext.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         ordertext.setForeground(new java.awt.Color(0, 153, 153));
         ordertext.setText("jLabel4");
-        getContentPane().add(ordertext, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 117, 34));
+        getContentPane().add(ordertext, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 120, 34));
 
-        totaltext.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        totaltext.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         totaltext.setForeground(new java.awt.Color(0, 153, 153));
         totaltext.setText("jLabel5");
-        getContentPane().add(totaltext, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 117, -1));
+        getContentPane().add(totaltext, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 117, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -235,9 +235,13 @@ public class Order_Receipt extends javax.swing.JFrame {
 
             Connection con = Conn.getCon();
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("Select * from orderdetails where OrderID='"+order_id+"'");
+            String query = "SELECT od.ProductID, p.product_name, od.Quantity, od.UnitPrice, od.subtotal " +
+                            "FROM orderdetails od " +
+                            "INNER JOIN product p ON od.ProductID = p.p_id " +
+                            "WHERE od.OrderID = '"+order_id+"'";
+            ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                model.addRow(new Object[]{rs.getString("ProductID"), rs.getString("Quantity"), rs.getString("UnitPrice"), rs.getString("subtotal")});
+                model.addRow(new Object[]{rs.getString("ProductID"), rs.getString("product_name"), rs.getString("Quantity"), rs.getString("UnitPrice"), rs.getString("subtotal")});
                 
             }
         } catch (Exception e) {
